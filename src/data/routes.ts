@@ -47,22 +47,22 @@ export const routes: RouteEntry[] = [
     origin: "Littlehampton",
     destination: "Gatwick Airport",
     category: "airport",
-    priceFrom: 68,
-    returnPrice: 72,
-    durationMins: [50, 70],
-    distanceMiles: 38,
-    title: "Littlehampton to Gatwick Airport Taxi | Fixed Fare From £68",
+    priceFrom: 100,
+    returnPrice: 100,
+    durationMins: [53, 70],
+    distanceMiles: 42.07,
+    title: "Littlehampton to Gatwick Airport Taxi | Fixed Fare From £100",
     metaDescription:
-      "Fixed-price Littlehampton to Gatwick Airport taxi from £68. Flight tracking, 60 minutes free waiting and 24/7 pickups across West Sussex. Call 01903 964888.",
-    lead:
-      "A fixed-fare Littlehampton to Gatwick Airport taxi from £68, booked once and confirmed in writing.",
+      "Fixed-price Littlehampton to Gatwick Airport taxi from £100. Flight tracking, 60 minutes free waiting and 24/7 pickups across West Sussex. Call 01903 964888.",
+    lead: "A fixed-fare Littlehampton to Gatwick Airport taxi from £100, booked once and confirmed in writing.",
     intro:
       "We cover every Gatwick departure from Littlehampton, Wick, Toddington and the wider BN17 area, running up the A29 and M23 or via the A280 when the roads demand it. Your driver tracks the flight, so an early landing or a two-hour delay costs you nothing extra, and the price we quote is the price you pay — no meter, no airport surcharge, no card fee.",
     localNote:
       "Pickups across Littlehampton, Wick, Toddington, Rustington and East Preston, with Littlehampton railway station and the Body Shop site covered as standard.",
     faqs: [
       {
-        question: "How long does a taxi from Littlehampton to Gatwick Airport take?",
+        question:
+          "How long does a taxi from Littlehampton to Gatwick Airport take?",
         answer:
           "Typically 50 to 70 minutes via the A29 and M23. For flights departing between 6am and 9am we recommend allowing 90 minutes, as the M23 northbound slows noticeably around Crawley.",
       },
@@ -88,15 +88,14 @@ export const routes: RouteEntry[] = [
     origin: "Gatwick Airport",
     destination: "Littlehampton",
     category: "airport",
-    priceFrom: 72,
-    returnPrice: 68,
-    durationMins: [50, 70],
-    distanceMiles: 38,
-    title: "Gatwick Airport to Littlehampton Taxi | Meet & Greet From £72",
+    priceFrom: 100,
+    returnPrice: 100,
+    durationMins: [53, 70],
+    distanceMiles: 42.07,
+    title: "Gatwick Airport to Littlehampton Taxi | Meet & Greet From £100",
     metaDescription:
-      "Pre-booked Gatwick Airport to Littlehampton taxi from £72, with arrivals meet and greet, flight tracking and 60 minutes free waiting. Book on 01903 964888.",
-    lead:
-      "A pre-booked Gatwick Airport to Littlehampton taxi from £72, with your driver waiting in arrivals.",
+      "Pre-booked Gatwick Airport to Littlehampton taxi from £100, with arrivals meet and greet, flight tracking and 60 minutes free waiting. Book on 01903 964888.",
+    lead: "A pre-booked Gatwick Airport to Littlehampton taxi from £100, with your driver waiting in arrivals.",
     intro:
       "Land, clear baggage reclaim and walk straight to a driver holding your name. We watch the inbound flight from the moment it leaves, so a delayed landing simply moves your pickup — there is nothing to re-book and nothing more to pay. The run back down to Littlehampton takes under an hour outside peak times.",
     localNote:
@@ -129,15 +128,14 @@ export const routes: RouteEntry[] = [
     origin: "Littlehampton",
     destination: "Heathrow Airport",
     category: "airport",
-    priceFrom: 115,
-    returnPrice: 120,
+    priceFrom: 142,
+    returnPrice: 150,
     durationMins: [85, 115],
-    distanceMiles: 62,
-    title: "Littlehampton to Heathrow Taxi | Fixed Price From £115",
+    distanceMiles: 65,
+    title: "Littlehampton to Heathrow Taxi | Fixed Price From £142",
     metaDescription:
-      "Littlehampton to Heathrow Airport taxi at a fixed £115. All terminals, flight tracking, free waiting and 24/7 West Sussex pickups. Call 01903 964888 to book.",
-    lead:
-      "A fixed £115 Littlehampton to Heathrow Airport taxi, covering all five terminals.",
+      "Littlehampton to Heathrow Airport taxi at a fixed £142. All terminals, flight tracking, free waiting and 24/7 West Sussex pickups. Call 01903 964888 to book.",
+    lead: "A fixed £142 Littlehampton to Heathrow Airport taxi, covering all five terminals.",
     intro:
       "Heathrow is the longer of the two main runs from Littlehampton, usually an hour and a half up the A29 and M25 anticlockwise. Because the fare is fixed, a slow stretch around the M25 Surrey section costs you nothing extra. We quote all five terminals at the same price and build the early-morning traffic into the pickup time.",
     localNote:
@@ -146,10 +144,11 @@ export const routes: RouteEntry[] = [
       {
         question: "Is the fare the same for every Heathrow terminal?",
         answer:
-          "Yes. Terminals 2, 3, 4 and 5 are all charged at the same fixed £115 from Littlehampton, so a last-minute terminal change does not alter the price.",
+          "Yes. Terminals 2, 3, 4 and 5 are all charged at the same fixed £142 from Littlehampton, so a last-minute terminal change does not alter the price.",
       },
       {
-        question: "How early should I leave Littlehampton for a Heathrow flight?",
+        question:
+          "How early should I leave Littlehampton for a Heathrow flight?",
         answer:
           "Allow three and a half hours before a long-haul departure. The M25 between the M23 and the M4 is the variable, and it is far busier from 6am onwards.",
       },
@@ -165,15 +164,14 @@ export const routes: RouteEntry[] = [
     origin: "Heathrow Airport",
     destination: "Littlehampton",
     category: "airport",
-    priceFrom: 120,
-    returnPrice: 115,
+    priceFrom: 142,
+    returnPrice: 150,
     durationMins: [85, 115],
     distanceMiles: 62,
-    title: "Heathrow to Littlehampton Taxi | Arrivals Pickup From £120",
+    title: "Heathrow to Littlehampton Taxi | Arrivals Pickup From £142",
     metaDescription:
-      "Heathrow Airport to Littlehampton taxi from £120 with arrivals meet and greet, flight tracking and free waiting. Pre-book 24/7 on 01903 964888.",
-    lead:
-      "A pre-booked Heathrow to Littlehampton taxi from £120, with meet and greet in arrivals.",
+      "Heathrow Airport to Littlehampton taxi from £142 with arrivals meet and greet, flight tracking and free waiting. Pre-book 24/7 on 01903 964888.",
+    lead: "A pre-booked Heathrow to Littlehampton taxi from £142, with meet and greet in arrivals.",
     intro:
       "After a long-haul flight the last thing you want is a taxi rank queue. Your driver is already in the arrivals hall with a name board, and the car is a short walk away. The run down to Littlehampton takes around an hour and a half, and the fare is agreed before you fly.",
     localNote:
@@ -201,14 +199,14 @@ export const routes: RouteEntry[] = [
     origin: "Littlehampton",
     destination: "Brighton",
     category: "city",
-    priceFrom: 52,
-    returnPrice: 52,
+    priceFrom: 60,
+    returnPrice: 60,
     durationMins: [40, 60],
     distanceMiles: 24,
-    title: "Littlehampton to Brighton Taxi | Fixed Fare From £52",
+    title: "Littlehampton to Brighton Taxi | Fixed Fare From £60",
     metaDescription:
-      "Littlehampton to Brighton taxi from £52, fixed price day or night. Ideal for nights out, the Amex and Brighton station. Book 24/7 on 01903 964888.",
-    lead: "A fixed £52 Littlehampton to Brighton taxi, day or night.",
+      "Littlehampton to Brighton taxi from £60, fixed price day or night. Ideal for nights out, the Amex and Brighton station. Book 24/7 on 01903 964888.",
+    lead: "A fixed £60 Littlehampton to Brighton taxi, day or night.",
     intro:
       "The coast road to Brighton is straightforward until it is not — the A259 through Shoreham and Hove can double the journey on a summer weekend. A fixed fare means that is our problem, not yours. We cover the city centre, the seafront, the Lanes, Brighton station and the Amex Stadium.",
     localNote:
@@ -236,14 +234,14 @@ export const routes: RouteEntry[] = [
     origin: "Brighton",
     destination: "Littlehampton",
     category: "city",
-    priceFrom: 52,
-    returnPrice: 52,
+    priceFrom: 60,
+    returnPrice: 60,
     durationMins: [40, 60],
     distanceMiles: 24,
-    title: "Brighton to Littlehampton Taxi | Fixed Price From £52",
+    title: "Brighton to Littlehampton Taxi | Fixed Price From £60",
     metaDescription:
-      "Brighton to Littlehampton taxi from £52 with no late-night surcharge. Pre-book a car home from the city centre or the Amex. Call 01903 964888.",
-    lead: "A fixed £52 Brighton to Littlehampton taxi, with no late-night surcharge.",
+      "Brighton to Littlehampton taxi from £60 with no late-night surcharge. Pre-book a car home from the city centre or the Amex. Call 01903 964888.",
+    lead: "A fixed £60 Brighton to Littlehampton taxi, with no late-night surcharge.",
     intro:
       "Getting out of Brighton late is the hard part — ranks are long and app pricing surges exactly when you need a car. Pre-book with us and the price is locked in, the driver is expecting you, and you are back in Littlehampton in well under an hour.",
     localNote:
@@ -271,14 +269,14 @@ export const routes: RouteEntry[] = [
     origin: "Worthing",
     destination: "Gatwick Airport",
     category: "airport",
-    priceFrom: 65,
-    returnPrice: 69,
+    priceFrom: 85,
+    returnPrice: 85,
     durationMins: [45, 65],
-    distanceMiles: 34,
-    title: "Worthing to Gatwick Airport Taxi | Fixed Fare From £65",
+    distanceMiles: 37,
+    title: "Worthing to Gatwick Airport Taxi | Fixed Fare From £85",
     metaDescription:
-      "Worthing to Gatwick Airport taxi from £65, fixed price with flight tracking and free waiting. 24/7 pickups across Worthing and West Sussex. Call 01903 964888.",
-    lead: "A fixed-fare Worthing to Gatwick Airport taxi from £65.",
+      "Worthing to Gatwick Airport taxi from £85, fixed price with flight tracking and free waiting. 24/7 pickups across Worthing and West Sussex. Call 01903 964888.",
+    lead: "A fixed-fare Worthing to Gatwick Airport taxi from £85.",
     intro:
       "From Worthing the A24 and A264 give a slightly shorter run to Gatwick than from Littlehampton, and the fare reflects it. We collect from anywhere in Worthing, Goring-by-Sea, Durrington and Findon, and the quote covers both terminals.",
     localNote:
@@ -292,7 +290,7 @@ export const routes: RouteEntry[] = [
       {
         question: "Do you cover Goring-by-Sea and Durrington at the same fare?",
         answer:
-          "Yes, both are included in the £65 Worthing fixed fare. Outlying villages are quoted separately but still at a fixed price.",
+          "Yes, both are included in the £85 Worthing fixed fare. Outlying villages are quoted separately but still at a fixed price.",
       },
       {
         question: "Can I pay by card?",
@@ -306,15 +304,14 @@ export const routes: RouteEntry[] = [
     origin: "Littlehampton",
     destination: "Southampton Airport",
     category: "airport",
-    priceFrom: 98,
-    returnPrice: 102,
+    priceFrom: 130,
+    returnPrice: 130,
     durationMins: [70, 95],
     distanceMiles: 55,
-    title: "Littlehampton to Southampton Airport Taxi | From £98",
+    title: "Littlehampton to Southampton Airport Taxi | From £130",
     metaDescription:
-      "Littlehampton to Southampton Airport taxi from £98, fixed price with flight tracking. Also serving Southampton cruise terminals. Book on 01903 964888.",
-    lead:
-      "A fixed £98 Littlehampton to Southampton Airport taxi, along the A27 coastal route.",
+      "Littlehampton to Southampton Airport taxi from £130, fixed price with flight tracking. Also serving Southampton cruise terminals. Book on 01903 964888.",
+    lead: "A fixed £130 Littlehampton to Southampton Airport taxi, along the A27 coastal route.",
     intro:
       "Southampton Airport is an easy run west along the A27 through Chichester and Portsmouth, usually around 80 minutes. The same route serves the Southampton cruise terminals, which we quote at a similar fixed fare — useful if you are joining a ship rather than a flight.",
     localNote:
@@ -342,15 +339,14 @@ export const routes: RouteEntry[] = [
     origin: "Littlehampton",
     destination: "Portsmouth",
     category: "port",
-    priceFrom: 72,
-    returnPrice: 72,
+    priceFrom: 100,
+    returnPrice: 100,
     durationMins: [55, 75],
     distanceMiles: 35,
-    title: "Littlehampton to Portsmouth Taxi | Port & City From £72",
+    title: "Littlehampton to Portsmouth Taxi | Port & City From £100",
     metaDescription:
-      "Littlehampton to Portsmouth taxi from £72, covering the international ferry port, Gunwharf Quays and the Hard Interchange. Book 24/7 on 01903 964888.",
-    lead:
-      "A fixed £72 Littlehampton to Portsmouth taxi, covering the ferry port and the city.",
+      "Littlehampton to Portsmouth taxi from £100, covering the international ferry port, Gunwharf Quays and the Hard Interchange. Book 24/7 on 01903 964888.",
+    lead: "A fixed £100 Littlehampton to Portsmouth taxi, covering the ferry port and the city.",
     intro:
       "Whether you are catching a Brittany Ferries sailing, heading to Gunwharf Quays or making a hospital appointment at Queen Alexandra, the run west on the A27 takes around an hour. For ferry departures we build the check-in deadline into the pickup time rather than the sailing time.",
     localNote:
@@ -378,15 +374,14 @@ export const routes: RouteEntry[] = [
     origin: "Littlehampton",
     destination: "Central London",
     category: "city",
-    priceFrom: 165,
-    returnPrice: 170,
+    priceFrom: 200,
+    returnPrice: 190,
     durationMins: [110, 150],
-    distanceMiles: 62,
-    title: "Littlehampton to London Taxi | Fixed Price From £165",
+    distanceMiles: 65.06,
+    title: "Littlehampton to London Taxi | Fixed Price From £200",
     metaDescription:
-      "Littlehampton to Central London taxi from £165, fixed price including the ULEZ and congestion charge. Executive cars available. Call 01903 964888.",
-    lead:
-      "A fixed £165 Littlehampton to Central London taxi, with the congestion charge and ULEZ included.",
+      "Littlehampton to Central London taxi from £200, fixed price including the ULEZ and congestion charge. Executive cars available. Call 01903 964888.",
+    lead: "A fixed £200 Littlehampton to Central London taxi, with the congestion charge and ULEZ included.",
     intro:
       "A direct car to London makes sense when the train does not: early meetings, heavy luggage, a group of three or four, or a late finish after the last service home. The quote includes the congestion charge and ULEZ, so there is nothing to settle afterwards. Executive saloons are available for client-facing trips.",
     localNote:
@@ -429,8 +424,12 @@ export function getRelatedRoutes(current: RouteEntry, limit = 4): RouteEntry[] {
   const candidates = routes.filter(
     (route) => route.slug !== current.slug && route.slug !== reverseSlug,
   );
-  const sameCategory = candidates.filter((route) => route.category === current.category);
-  const rest = candidates.filter((route) => route.category !== current.category);
+  const sameCategory = candidates.filter(
+    (route) => route.category === current.category,
+  );
+  const rest = candidates.filter(
+    (route) => route.category !== current.category,
+  );
   return [...sameCategory, ...rest].slice(0, limit);
 }
 

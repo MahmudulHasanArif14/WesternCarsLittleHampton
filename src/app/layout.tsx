@@ -34,7 +34,11 @@ export const viewport: Viewport = {
   themeColor: "#1F1F1F",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en-GB" className={onest.variable}>
       <body>

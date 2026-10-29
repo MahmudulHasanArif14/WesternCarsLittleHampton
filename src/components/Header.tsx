@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "./Button";
 import { mainNav, site } from "@/lib/site";
+import Image from "next/image";
 
 /**
  * Announcement bar + sticky header (design system 3.1, 3.2).
@@ -24,9 +25,7 @@ export function Header() {
       <header className="header">
         <div className="container header__inner">
           <Link href="/" className="logo" aria-label={`${site.name} — home`}>
-            <span className="logo__mark" aria-hidden="true">
-              WC
-            </span>
+            <Image src="/logo.png" width={48} height={48} alt="" />
             <span className="logo__text">
               <span className="logo__name">Western Cars</span>
               <span className="logo__sub">Littlehampton</span>

@@ -14,9 +14,9 @@ export const site = {
   phoneHref: "tel:+441903964888",
   // E.164, used in JSON-LD and the WhatsApp deep link.
   phoneE164: "+441903964888",
-  whatsapp: "https://wa.me/441903964888",
+  whatsapp: "https://wa.me/4407722489859",
   facebook: "https://www.facebook.com/profile.php?id=61595882826505",
-  email: "bookings@westerncarslittlehampton.co.uk",
+  email: "info@westerncarslittlehampton.co.uk",
   // TODO(client): confirm the trading address. Street line is deliberately
   // omitted from JSON-LD until supplied — do not invent one.
   address: {
@@ -229,10 +229,22 @@ export const footerColumns = [
   {
     heading: "Airport transfers",
     links: [
-      { label: "Littlehampton to Gatwick", href: "/transfers/littlehampton-to-gatwick-airport" },
-      { label: "Littlehampton to Heathrow", href: "/transfers/littlehampton-to-heathrow-airport" },
-      { label: "Gatwick to Littlehampton", href: "/transfers/gatwick-airport-to-littlehampton" },
-      { label: "Worthing to Gatwick", href: "/transfers/worthing-to-gatwick-airport" },
+      {
+        label: "Littlehampton to Gatwick",
+        href: "/transfers/littlehampton-to-gatwick-airport",
+      },
+      {
+        label: "Littlehampton to Heathrow",
+        href: "/transfers/littlehampton-to-heathrow-airport",
+      },
+      {
+        label: "Gatwick to Littlehampton",
+        href: "/transfers/gatwick-airport-to-littlehampton",
+      },
+      {
+        label: "Worthing to Gatwick",
+        href: "/transfers/worthing-to-gatwick-airport",
+      },
     ],
   },
   {

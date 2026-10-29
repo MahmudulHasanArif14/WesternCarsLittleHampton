@@ -14,7 +14,12 @@ import {
   SectionHead,
   SeoBand,
 } from "@/components/blocks";
-import { getRelatedRoutes, getRoute, routes, type RouteEntry } from "@/data/routes";
+import {
+  getRelatedRoutes,
+  getRoute,
+  routes,
+  type RouteEntry,
+} from "@/data/routes";
 import { photos } from "@/lib/images";
 import { breadcrumbSchema, faqSchema, routeServiceSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
@@ -64,7 +69,10 @@ export default async function RoutePage({ params }: Params) {
   const trail = [
     { name: "Home", href: "/" },
     { name: "Transfers", href: "/transfers" },
-    { name: `${route.origin} to ${route.destination}`, href: `/transfers/${route.slug}` },
+    {
+      name: `${route.origin} to ${route.destination}`,
+      href: `/transfers/${route.slug}`,
+    },
   ];
 
   return (
@@ -328,7 +336,11 @@ export default async function RoutePage({ params }: Params) {
 
           <div className="route-cards">
             {related.map((item) => (
-              <Link key={item.slug} href={`/transfers/${item.slug}`} className="route-card notch">
+              <Link
+                key={item.slug}
+                href={`/transfers/${item.slug}`}
+                className="route-card notch"
+              >
                 <h3>
                   {item.origin} to {item.destination}
                 </h3>

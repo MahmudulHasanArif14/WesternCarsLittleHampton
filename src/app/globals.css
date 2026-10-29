@@ -5,14 +5,14 @@
 
 :root {
   --color-primary: #1f1f1f;
-  --color-accent: #fbe3bc;
+  --color-accent: #3C58A2;
   --color-text: #333333;
   --color-white: #ffffff;
   --color-surface: #f7f7f7;
   --color-dark-2: #252525;
   --color-grey-700: #494949;
   --color-grey-300: #d3d3d3;
-  --color-yellow: #fab701;
+  --color-yellow: #3C58A2;
   --color-line: rgba(23, 23, 23, 0.15);
   --color-line-inverse: rgba(255, 255, 255, 0.32);
   --color-whatsapp: #25d366;
@@ -244,7 +244,7 @@ a {
 
 .btn--accent {
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn--accent:hover {
@@ -299,33 +299,29 @@ a {
 
 .notch {
   position: relative;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    48px 100%,
-    48px calc(100% - 16px),
-    32px calc(100% - 16px),
-    32px calc(100% - 32px),
-    16px calc(100% - 32px),
-    16px calc(100% - 48px),
-    0 calc(100% - 48px)
-  );
+  clip-path: polygon(0 0,
+      100% 0,
+      100% 100%,
+      48px 100%,
+      48px calc(100% - 16px),
+      32px calc(100% - 16px),
+      32px calc(100% - 32px),
+      16px calc(100% - 32px),
+      16px calc(100% - 48px),
+      0 calc(100% - 48px));
 }
 
 .notch--tr {
-  clip-path: polygon(
-    0 0,
-    calc(100% - 48px) 0,
-    calc(100% - 48px) 16px,
-    calc(100% - 32px) 16px,
-    calc(100% - 32px) 32px,
-    calc(100% - 16px) 32px,
-    calc(100% - 16px) 48px,
-    100% 48px,
-    100% 100%,
-    0 100%
-  );
+  clip-path: polygon(0 0,
+      calc(100% - 48px) 0,
+      calc(100% - 48px) 16px,
+      calc(100% - 32px) 16px,
+      calc(100% - 32px) 32px,
+      calc(100% - 16px) 32px,
+      calc(100% - 16px) 48px,
+      100% 48px,
+      100% 100%,
+      0 100%);
 }
 
 /* ---------- Announcement bar (3.1) ---------- */
@@ -343,11 +339,11 @@ a {
 }
 
 .announce b {
-  color: var(--color-accent);
+  color: #FAB701;
 }
 
 .announce a {
-  color: var(--color-accent);
+  color: #FAB701;
   font-weight: 700;
 }
 
@@ -593,12 +589,10 @@ a {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    90deg,
-    rgba(31, 31, 31, 0.88) 0%,
-    rgba(31, 31, 31, 0.62) 45%,
-    rgba(31, 31, 31, 0.25) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(31, 31, 31, 0.88) 0%,
+      rgba(31, 31, 31, 0.62) 45%,
+      rgba(31, 31, 31, 0.25) 100%);
 }
 
 .hero__inner {
@@ -693,6 +687,7 @@ a {
 }
 
 @media (max-width: 767px) {
+
   .grid--2,
   .grid--3 {
     grid-template-columns: 1fr;
@@ -923,7 +918,7 @@ a {
   margin-bottom: 12px;
 }
 
-.vehicle-card > p {
+.vehicle-card>p {
   text-align: center;
 }
 
@@ -1227,7 +1222,7 @@ a {
   font: 700 14px/1.2 var(--font);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-accent);
+  color: var(--color-white);
   margin-bottom: 18px;
 }
 
@@ -1586,6 +1581,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

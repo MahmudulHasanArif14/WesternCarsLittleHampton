@@ -17,10 +17,26 @@ export const metadata = buildMetadata({
 });
 
 const GROUPS = [
-  { key: "airport", heading: "Airport transfers", blurb: "Flight tracking and free waiting time included" },
-  { key: "city", heading: "City to city", blurb: "Door to door, day or night, no surge pricing" },
-  { key: "port", heading: "Port and cruise", blurb: "Timed to check-in, not to the sailing" },
-  { key: "station", heading: "Station transfers", blurb: "Rail connections across the South East" },
+  {
+    key: "airport",
+    heading: "Airport transfers",
+    blurb: "Flight tracking and free waiting time included",
+  },
+  {
+    key: "city",
+    heading: "City to city",
+    blurb: "Door to door, day or night, no surge pricing",
+  },
+  {
+    key: "port",
+    heading: "Port and cruise",
+    blurb: "Timed to check-in, not to the sailing",
+  },
+  {
+    key: "station",
+    heading: "Station transfers",
+    blurb: "Rail connections across the South East",
+  },
 ] as const;
 
 export default function TransfersIndexPage() {
@@ -56,7 +72,9 @@ export default function TransfersIndexPage() {
       <section className="section">
         <div className="container grid grid--2">
           {GROUPS.map((group) => {
-            const groupRoutes = routes.filter((route) => route.category === group.key);
+            const groupRoutes = routes.filter(
+              (route) => route.category === group.key,
+            );
             if (groupRoutes.length === 0) return null;
 
             return (
@@ -77,7 +95,9 @@ export default function TransfersIndexPage() {
                       <span>
                         {route.origin} to {route.destination}
                       </span>
-                      <span className="price-row__price">£{route.priceFrom}</span>
+                      <span className="price-row__price">
+                        £{route.priceFrom}
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -99,8 +119,10 @@ export default function TransfersIndexPage() {
         <strong>Gatwick, Heathrow and Southampton airports</strong>, to{" "}
         <strong>Brighton, Portsmouth and London</strong>, and to the{" "}
         <strong>Portsmouth and Southampton cruise terminals</strong>. Pickups
-        cover <strong>Rustington, East Preston, Angmering, Worthing, Arundel</strong>{" "}
-        and the surrounding <strong>West Sussex</strong> villages, 24 hours a day.
+        cover{" "}
+        <strong>Rustington, East Preston, Angmering, Worthing, Arundel</strong>{" "}
+        and the surrounding <strong>West Sussex</strong> villages, 24 hours a
+        day.
       </SeoBand>
     </>
   );

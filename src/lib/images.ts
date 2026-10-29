@@ -24,8 +24,8 @@ export const photos = {
     alt: "Driver at the wheel of a private hire car on a city road at dusk",
   },
   taxiSign: {
-    src: unsplash("photo-1556122071-e404eaedb77f"),
-    alt: "Illuminated yellow taxi roof sign at night",
+    src: unsplash("photo-1773063250524-38ac5eebd3c5"),
+    alt: "silver-sedan-parked-in-front-of-a-modern-building",
   },
   executiveCar: {
     src: unsplash("photo-1485291571150-772bcfc10da5"),
@@ -44,8 +44,8 @@ export const photos = {
     alt: "View of an aircraft wing above the clouds at sunrise",
   },
   minibus: {
-    src: unsplash("photo-1464219789935-c2d9d9aba644"),
-    alt: "Yellow passenger van parked in an airport car park",
+    src: unsplash("photo-1617209680907-4f9b76218a4b"),
+    alt: "black-mercedes-benz-c-class-parked-on-sidewalk-during-daytime",
   },
   coach: {
     src: unsplash("photo-1570125909232-eb263c188f7e"),

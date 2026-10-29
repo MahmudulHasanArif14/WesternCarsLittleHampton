@@ -62,7 +62,9 @@ const homeFaqs = [
 
 const featured = featuredServiceSlugs
   .map((slug) => services.find((service) => service.slug === slug))
-  .filter((service): service is NonNullable<typeof service> => Boolean(service));
+  .filter((service): service is NonNullable<typeof service> =>
+    Boolean(service),
+  );
 
 export default function HomePage() {
   const popularRoutes = routes.slice(0, 8);
@@ -89,9 +91,10 @@ export default function HomePage() {
             Your 24/7 taxi service in Littlehampton and across West Sussex
           </h1>
           <p className="lead hero__text">
-            Fixed-fare airport transfers, corporate travel, wheelchair accessible
-            cars and 8-seater minibuses — driven by licensed local drivers who
-            know the roads from Littlehampton to Gatwick, Heathrow and beyond.
+            Fixed-fare airport transfers, corporate travel, wheelchair
+            accessible cars and 8-seater minibuses — driven by licensed local
+            drivers who know the roads from Littlehampton to Gatwick, Heathrow
+            and beyond.
           </p>
           <div className="hero__ctas">
             <Button href="/#book" variant="accent" icon="up-right">
@@ -212,7 +215,10 @@ export default function HomePage() {
           <div className="grid grid--3" style={{ gap: 16 }}>
             {services.map((service) => (
               <p key={service.slug} style={{ fontSize: 15 }}>
-                <span aria-hidden="true" style={{ color: "var(--color-accent)" }}>
+                <span
+                  aria-hidden="true"
+                  style={{ color: "var(--color-accent)" }}
+                >
                   ▪{" "}
                 </span>
                 {service.name}
@@ -351,7 +357,9 @@ export default function HomePage() {
                       <span>
                         {route.origin} to {route.destination}
                       </span>
-                      <span className="price-row__price">£{route.priceFrom}</span>
+                      <span className="price-row__price">
+                        £{route.priceFrom}
+                      </span>
                     </Link>
                   ))}
               </div>
@@ -374,7 +382,9 @@ export default function HomePage() {
                       <span>
                         {route.origin} to {route.destination}
                       </span>
-                      <span className="price-row__price">£{route.priceFrom}</span>
+                      <span className="price-row__price">
+                        £{route.priceFrom}
+                      </span>
                     </Link>
                   ))}
               </div>
@@ -463,8 +473,19 @@ export default function HomePage() {
                 "Help with Arun District Council licensing",
               ]}
             />
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 32 }}>
-              <Button href="/#contact" variant="light" icon="right">
+            <div
+              style={{
+                display: "flex",
+                gap: 14,
+                flexWrap: "wrap",
+                marginTop: 32,
+              }}
+            >
+              <Button
+                href="mailto:info@westerncars.co.uk?subject=I%20want%20to%20become%20a%20driver"
+                variant="light"
+                icon="right"
+              >
                 Apply to drive
               </Button>
               <Button href={site.phoneHref} variant="outline-inverse">
@@ -506,8 +527,9 @@ export default function HomePage() {
             </div>
             <blockquote className="testimonial__quote">
               &ldquo;Booked a 4am run to Gatwick and the driver was outside at
-              3.50am. Price was exactly what was quoted, the car was spotless and
-              he helped with every bag. We use them for every flight now.&rdquo;
+              3.50am. Price was exactly what was quoted, the car was spotless
+              and he helped with every bag. We use them for every flight
+              now.&rdquo;
             </blockquote>
             <p className="testimonial__who">
               &mdash; Sample review. Replace with verified Google reviews before
@@ -537,7 +559,10 @@ export default function HomePage() {
               will come back to you with a price. The office is staffed 24 hours
               a day, every day of the year.
             </p>
-            <div className="footer__contact" style={{ color: "var(--color-text)" }}>
+            <div
+              className="footer__contact"
+              style={{ color: "var(--color-text)" }}
+            >
               <span>
                 Phone:{" "}
                 <a href={site.phoneHref}>
@@ -546,7 +571,11 @@ export default function HomePage() {
               </span>
               <span>
                 Facebook:{" "}
-                <a href={site.facebook} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={site.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Western Cars Littlehampton
                 </a>
               </span>
@@ -554,7 +583,14 @@ export default function HomePage() {
                 Based in {site.address.locality}, {site.address.region}
               </span>
             </div>
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginTop: 32 }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 14,
+                flexWrap: "wrap",
+                marginTop: 32,
+              }}
+            >
               <Button href={site.phoneHref} variant="dark">
                 Call {site.phone}
               </Button>
@@ -574,9 +610,12 @@ export default function HomePage() {
       {/* 11. Yellow SEO band (3.14) */}
       <SeoBand title="Taxi service in Littlehampton, West Sussex">
         Western Cars is a licensed <strong>Littlehampton taxi service</strong>{" "}
-        covering <strong>Rustington, East Preston, Angmering, Ferring,
-        Worthing, Arundel, Bognor Regis</strong> and the wider{" "}
-        <strong>West Sussex</strong> area. We run fixed-fare{" "}
+        covering{" "}
+        <strong>
+          Rustington, East Preston, Angmering, Ferring, Worthing, Arundel,
+          Bognor Regis
+        </strong>{" "}
+        and the wider <strong>West Sussex</strong> area. We run fixed-fare{" "}
         <strong>Gatwick and Heathrow airport transfers</strong>, corporate
         accounts, <strong>wheelchair accessible taxis</strong>,{" "}
         <strong>8-seater minibuses</strong>, wedding cars and a 24-hour local
