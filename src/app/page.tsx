@@ -31,7 +31,7 @@ const homeFaqs = [
   {
     question: "What areas does Western Cars Littlehampton cover?",
     answer:
-      "We are based in Littlehampton and cover the whole of West Sussex, including Rustington, East Preston, Angmering, Ferring, Worthing, Arundel, Bognor Regis and Chichester. Longer journeys anywhere in mainland UK are quoted at a fixed price.",
+      "We  cover the whole of West Sussex, including Rustington, East Preston, Angmering, Ferring, Worthing, Arundel, Bognor Regis and Chichester. Longer journeys anywhere in mainland UK are quoted at a fixed price.",
   },
   {
     question: "How far in advance should I book an airport transfer?",
@@ -606,7 +606,7 @@ export default function HomePage() {
                 </a>
               </span>
               <span>
-                Based in {site.address.locality}, {site.address.region}
+                We Cover {site.address.locality}, {site.address.region}
               </span>
             </div>
             <div

@@ -33,7 +33,7 @@ const PAGES: Record<string, LegalPage> = {
     sections: [
       {
         heading: "1. Who we are",
-        body: "Western Cars Littlehampton is a licensed private hire operator based in Littlehampton, West Sussex, operating under licence from Arun District Council.",
+        body: "Western Cars Littlehampton is a licensed private hire operator  in Littlehampton, West Sussex, operating under licence from Arun District Council.",
       },
       {
         heading: "2. Bookings and quotations",
@@ -185,7 +185,13 @@ export default async function LegalPage({ params }: Params) {
                 borderTop: "1px solid var(--color-line)",
               }}
             >
-              <h2 style={{ fontSize: 24, lineHeight: 1.4, letterSpacing: "-0.02em" }}>
+              <h2
+                style={{
+                  fontSize: 24,
+                  lineHeight: 1.4,
+                  letterSpacing: "-0.02em",
+                }}
+              >
                 {section.heading}
               </h2>
               <p>{section.body}</p>
