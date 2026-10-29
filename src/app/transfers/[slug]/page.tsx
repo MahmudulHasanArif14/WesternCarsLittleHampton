@@ -106,7 +106,11 @@ export default async function RoutePage({ params }: Params) {
             </div>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <Button href="#book" variant="dark" icon="up-right">
+              <Button
+                href="https://westerncars.webbooker.icabbi.com/"
+                variant="dark"
+                icon="up-right"
+              >
                 Book a transfer
               </Button>
               <Button href={site.phoneHref} variant="outline">
@@ -167,7 +171,11 @@ export default async function RoutePage({ params }: Params) {
             title={`What's included in your ${route.destination} transfer`}
             text="Every fixed-fare journey comes with the same standards, whichever vehicle turns up."
             cta={
-              <Button href="#book" variant="dark" icon="up-right">
+              <Button
+                href="https://westerncars.webbooker.icabbi.com/"
+                variant="dark"
+                icon="up-right"
+              >
                 Book a transfer
               </Button>
             }
@@ -257,7 +265,11 @@ export default async function RoutePage({ params }: Params) {
               Ready to book your {route.origin} to {route.destination} transfer?
             </p>
             <div style={{ marginTop: 20 }}>
-              <Button href="#book" variant="dark" icon="up-right">
+              <Button
+                href="https://westerncars.webbooker.icabbi.com/"
+                variant="dark"
+                icon="up-right"
+              >
                 Book online
               </Button>
             </div>

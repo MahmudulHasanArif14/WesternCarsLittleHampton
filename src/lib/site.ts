@@ -220,7 +220,10 @@ export const footerColumns = [
   {
     heading: "Ride",
     links: [
-      { label: "Book online", href: "/#book" },
+      {
+        label: "Book online",
+        href: "https://westerncars.webbooker.icabbi.com/",
+      },
       { label: "All services", href: "/#services" },
       { label: "Popular transfers", href: "/transfers" },
       { label: "Contact us", href: "/#contact" },

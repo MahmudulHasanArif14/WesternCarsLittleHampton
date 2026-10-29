@@ -160,7 +160,7 @@ export function SeoBand({
   title,
   children,
   ctaLabel = "Book a transfer",
-  ctaHref = "/#book",
+  ctaHref = "https://westerncars.webbooker.icabbi.com/",
 }: {
   title: string;
   children: ReactNode;

@@ -46,7 +46,11 @@ export function Header() {
                 {site.phone}
               </Button>
             </span>
-            <Button href="/#book" variant="accent" icon="up-right">
+            <Button
+              href="https://westerncars.webbooker.icabbi.com/"
+              variant="accent"
+              icon="up-right"
+            >
               Book Online
             </Button>
           </div>
@@ -66,7 +70,12 @@ export function Header() {
               <Button href={site.phoneHref} variant="dark" block>
                 Call {site.phone}
               </Button>
-              <Button href="/#book" variant="accent" icon="up-right" block>
+              <Button
+                href="https://westerncars.webbooker.icabbi.com/"
+                variant="accent"
+                icon="up-right"
+                block
+              >
                 Book Online
               </Button>
             </div>
