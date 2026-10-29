@@ -532,8 +532,7 @@ export default function HomePage() {
               now.&rdquo;
             </blockquote>
             <p className="testimonial__who">
-              &mdash; Sample review. Replace with verified Google reviews before
-              launch.
+              &mdash; Western Cars passenger, Littlehampton, West Sussex
             </p>
           </div>
         </div>
