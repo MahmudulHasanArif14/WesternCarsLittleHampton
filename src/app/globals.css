@@ -1580,13 +1580,256 @@ a {
   outline-offset: 3px;
 }
 
+/* =========================================================================
+   MOTION LAYER
+   Zero-JavaScript by design: every animation below is CSS, so it runs off the
+   main thread and cannot delay hydration, LCP or INP. Scroll reveals use
+   scroll-driven timelines behind @supports — browsers without them simply show
+   the content, so nothing is ever hidden from a crawler or a reader.
+   ========================================================================= */
+
+:root {
+  /* Built-in easings are too weak for UI; these are the project curves. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --dur-press: 140ms;
+  --dur-hover: 200ms;
+  --dur-panel: 240ms;
+  --dur-enter: 460ms;
+  /* Lets height: auto animate on ::details-content where supported. */
+  interpolate-size: allow-keywords;
+}
+
+/* Sticky header is 100px tall plus the announce bar — keep anchor targets clear
+   of it so in-page nav lands on the heading, not behind the header. */
+section[id],
+div[id] {
+  scroll-margin-top: 130px;
+}
+
+/* ---------- Press and hover feedback ---------- */
+
+.btn {
+  transition:
+    box-shadow var(--dur-hover) var(--ease-out),
+    background var(--dur-hover) var(--ease-out),
+    color var(--dur-hover) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.nav__link {
+  transition: border-bottom-color var(--dur-hover) ease;
+}
+
+.booking-bar__field {
+  transition:
+    border-color var(--dur-hover) ease,
+    background var(--dur-hover) ease;
+}
+
+.service-card,
+.route-card,
+.vehicle-card,
+.whatsapp-fab,
+.footer__col a,
+.crumbs a,
+.footer__contact a {
+  transition:
+    transform var(--dur-hover) var(--ease-out),
+    background var(--dur-hover) var(--ease-out),
+    color var(--dur-hover) var(--ease-out),
+    box-shadow var(--dur-hover) var(--ease-out);
+}
+
+.service-card__arrow,
+.route-card__arrow {
+  transition: transform var(--dur-hover) var(--ease-out);
+}
+
+/* Touch devices fire a sticky false :hover on tap, so all hover-only motion is
+   gated on a real pointer. Colour-only hovers stay available everywhere. */
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover .service-card__arrow,
+  .route-card:hover .route-card__arrow {
+    transform: translateX(4px);
+  }
+
+  .whatsapp-fab:hover {
+    transform: scale(1.06);
+  }
+
+  .vehicle-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .service-card:hover,
+  .route-card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Disclosure panels (FAQ, mobile menu) ---------- */
+
+@supports selector(::details-content) {
+  .faq__item::details-content,
+  .mobile-menu::details-content {
+    block-size: 0;
+    overflow: clip;
+    content-visibility: hidden;
+    transition:
+      block-size var(--dur-panel) var(--ease-out),
+      content-visibility var(--dur-panel) allow-discrete;
+  }
+
+  .faq__item[open]::details-content,
+  .mobile-menu[open]::details-content {
+    block-size: auto;
+    content-visibility: visible;
+  }
+}
+
+/* The glyph itself swaps +/- via content, so the sign gets a colour fade only;
+   rotating a plus or a minus reads as nothing happening. */
+.faq__q {
+  transition: color var(--dur-hover) ease;
+}
+
+.faq__item[open] .faq__q,
+.faq__q:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Hero entrance ---------- */
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__title,
+  .hero__text,
+  .hero__ctas,
+  .hero__bar {
+    animation: rise-in var(--dur-enter) var(--ease-out) both;
+  }
+
+  .hero__title {
+    animation-delay: 60ms;
+  }
+
+  .hero__text {
+    animation-delay: 130ms;
+  }
+
+  .hero__ctas {
+    animation-delay: 200ms;
+  }
+
+  .hero__bar {
+    animation-delay: 270ms;
+  }
+}
+
+/* ---------- Scroll reveals ---------- */
+
+/* `translate` rather than `transform`, so the filled end state of a
+   scroll-driven animation never fights a hover `transform` on the same card. */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 20px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .section-head,
+    .feature,
+    .service-card,
+    .route-card,
+    .vehicle-card,
+    .testimonial,
+    .step,
+    .mini,
+    .price-row,
+    .faq__item,
+    .seo-band,
+    .checklist li,
+    .route-hero__side > *,
+    .photo-strip div {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 8% entry 55%;
+    }
+
+    /* Siblings in one row cross the viewport together, so stagger them by
+       pushing each one's range a little further into the entry phase. */
+    .grid > *:nth-child(2),
+    .route-cards > *:nth-child(2),
+    .steps > *:nth-child(2),
+    .mini-grid > *:nth-child(2),
+    .checklist li:nth-child(2) {
+      animation-range: entry 13% entry 60%;
+    }
+
+    .grid > *:nth-child(3),
+    .route-cards > *:nth-child(3),
+    .steps > *:nth-child(3),
+    .mini-grid > *:nth-child(3),
+    .checklist li:nth-child(3) {
+      animation-range: entry 18% entry 65%;
+    }
+
+    .grid > *:nth-child(n + 4),
+    .route-cards > *:nth-child(n + 4),
+    .checklist li:nth-child(n + 4) {
+      animation-range: entry 23% entry 70%;
+    }
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+/* Fewer and gentler, not none: colour and opacity transitions still help
+   comprehension, so only movement is removed. */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation: none !important;
+    animation-timeline: auto !important;
+    translate: none !important;
+    transition-duration: 160ms !important;
+  }
+
+  .btn:active,
+  .vehicle-card:hover,
+  .service-card:hover,
+  .route-card:hover,
+  .whatsapp-fab:hover,
+  .service-card:hover .service-card__arrow,
+  .route-card:hover .route-card__arrow {
+    transform: none;
   }
 }

@@ -51,6 +51,12 @@ export function Footer() {
                 </a>
               </span>
               <span>
+                Email:{" "}
+                <a href={site.email ? `mailto:${site.email}` : "#"}>
+                  <strong>{site.email}</strong>
+                </a>
+              </span>
+              <span>
                 {site.address.locality}, {site.address.region},{" "}
                 {site.address.postalCode}
               </span>
@@ -98,7 +104,7 @@ export function Footer() {
         <div className="footer__bottom">
           <span>
             &copy; {year} {site.name}. All rights reserved. Licensed private
-            hire operator, Arun District Council.
+            hire operator, Adur District Council.
           </span>
           <nav aria-label="Legal">
             <Link href="/terms">Terms</Link>

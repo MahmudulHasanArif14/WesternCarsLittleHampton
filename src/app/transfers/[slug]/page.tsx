@@ -203,7 +203,7 @@ export default async function RoutePage({ params }: Params) {
               when booking.
             </Feature>
             <Feature icon="shield" title="Licensed and insured">
-              DBS-checked drivers licensed by Arun District Council, in fully
+              DBS-checked drivers licensed by Adur District Council, in fully
               insured private hire vehicles.
             </Feature>
           </div>

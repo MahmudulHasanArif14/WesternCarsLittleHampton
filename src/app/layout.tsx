@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd, WhatsAppFab } from "@/components/blocks";
-import { localBusinessSchema } from "@/lib/schema";
+import { localBusinessSchema, webSiteSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 const onest = Onest({
@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   applicationName: site.name,
   authors: [{ name: site.name }],
   formatDetection: { telephone: true },
+  // Points answer engines at the plain-text site summary served by
+  // src/app/llms.txt/route.ts.
+  alternates: { types: { "text/plain": `${site.url}/llms.txt` } },
 };
 
 export const viewport: Viewport = {
@@ -44,6 +47,7 @@ export default function RootLayout({
       <body>
         {/* One LocalBusiness node for the whole site; page schema references it. */}
         <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={webSiteSchema()} />
         <a className="skip-link" href="#main">
           Skip to main content
         </a>

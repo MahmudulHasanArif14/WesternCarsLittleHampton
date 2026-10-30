@@ -33,7 +33,7 @@ const PAGES: Record<string, LegalPage> = {
     sections: [
       {
         heading: "1. Who we are",
-        body: "Western Cars Littlehampton is a licensed private hire operator  in Littlehampton, West Sussex, operating under licence from Arun District Council.",
+        body: "Western Cars Littlehampton is a licensed private hire operator  in Littlehampton, West Sussex, operating under licence from Adur District Council.",
       },
       {
         heading: "2. Bookings and quotations",

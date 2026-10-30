@@ -13,7 +13,7 @@ import {
   ServiceCard,
 } from "@/components/blocks";
 import { buildMetadata } from "@/lib/seo";
-import { faqSchema } from "@/lib/schema";
+import { faqSchema, webPageSchema } from "@/lib/schema";
 import { photos } from "@/lib/images";
 import { featuredServiceSlugs, services, site } from "@/lib/site";
 import { routes } from "@/data/routes";
@@ -72,6 +72,15 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema(homeFaqs)} />
+      <JsonLd
+        data={webPageSchema({
+          path: "/",
+          name: "Taxi in Littlehampton | 24/7 Airport Transfers",
+          description:
+            "Licensed Littlehampton taxi service covering West Sussex 24/7, with fixed-fare Gatwick and Heathrow transfers.",
+          speakableSelectors: ["h1", ".hero__text", ".faq__q", ".faq__a"],
+        })}
+      />
 
       {/* 1. Hero (3.5 variant 1) */}
       <section className="hero">
@@ -150,7 +159,7 @@ export default function HomePage() {
               per head than booking two saloons.
             </Feature>
             <Feature icon="shield" title="Licensed and insured">
-              Every driver is DBS-checked and licensed by Arun District Council,
+              Every driver is DBS-checked and licensed by Adur District Council,
               and every vehicle is fully insured for private hire.
             </Feature>
           </div>
@@ -497,7 +506,7 @@ export default function HomePage() {
                 "Consistent airport and corporate work",
                 "Local office, not an overseas call centre",
                 "Flexible shifts around your own hours",
-                "Help with Arun District Council licensing",
+                "Help with Adur District Council licensing",
               ]}
             />
             <div
@@ -593,6 +602,12 @@ export default function HomePage() {
                 Phone:{" "}
                 <a href={site.phoneHref}>
                   <strong>{site.phone}</strong>
+                </a>
+              </span>
+              <span>
+                Email:{" "}
+                <a href={site.email ? `mailto:${site.email}` : "#"}>
+                  <strong>{site.email}</strong>
                 </a>
               </span>
               <span>

@@ -117,3 +117,56 @@ export function breadcrumbSchema(crumbs: { name: string; href: string }[]) {
     })),
   };
 }
+
+/**
+ * WebSite node. Kept separate from the business node so answer engines can
+ * resolve "which site is this" without re-reading the LocalBusiness, and so
+ * `inLanguage` is stated once for the whole property.
+ */
+export function webSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${site.url}/#website`,
+    url: site.url,
+    name: site.name,
+    inLanguage: "en-GB",
+    publisher: { "@id": ORG_ID },
+  };
+}
+
+/**
+ * WebPage node with `speakable`. The selectors tell voice assistants and
+ * answer engines which parts of the page are safe to read aloud or quote —
+ * the headline and the lead paragraph, never navigation or price tables.
+ */
+export function webPageSchema({
+  path,
+  name,
+  description,
+  speakableSelectors = ["h1", ".lead"],
+}: {
+  path: string;
+  name: string;
+  description: string;
+  speakableSelectors?: string[];
+}) {
+  const url = new URL(path, site.url).toString();
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: "en-GB",
+    isPartOf: { "@id": `${site.url}/#website` },
+    about: { "@id": ORG_ID },
+    primaryImageOfPage: { "@type": "ImageObject", url: `${site.url}/og-default.jpg` },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: speakableSelectors,
+    },
+  };
+}
